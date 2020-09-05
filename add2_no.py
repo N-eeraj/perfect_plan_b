@@ -5,6 +5,9 @@ while True:
 		break
 	except ValueError:
 		print('\nEnter a valid number\n')
+	except KeyboardInterrupt:
+		print('\n\nExiting')
+		exit()
 
 result = num1 + num2
 
