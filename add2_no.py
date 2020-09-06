@@ -13,4 +13,4 @@ while True:
 
 result = num1 + num2
 
-print(result)
+print('Sum of {} & {} is {}'.format(num1, num2, result))
