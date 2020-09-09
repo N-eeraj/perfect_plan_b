@@ -1,5 +1,5 @@
 from termcolor import colored
-import math
+import math #import to get pi value
 
 while True: #infinite loop till a valid input is received
 	try: #trying to read valid input
@@ -11,8 +11,8 @@ while True: #infinite loop till a valid input is received
 		print(colored('\nExiting', 'white'))
 		exit()
 
-area = round(math.pi * r ** 2,2)
-per = round(2 * math.pi * r,2)
+area = round(math.pi * r ** 2, 2) #calculating the area & rounding off to 2 decimal values
+per = round(2 * math.pi * r, 2) #calculating the circumference
 
 print('Area of the circle is', area)
 print('Perimeter of the circle is', per)
