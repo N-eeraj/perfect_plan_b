@@ -17,6 +17,6 @@ for digit in num:
 	sum += int(digit) ** len(num) #calculating sum of number raised to length of number
 
 if sum == int(num):
-	print('{} is an amstrong number'.format(num)) #printing true case
+	print(num, 'is an amstrong number') #printing true case
 else :
-	print('{} is not an amstrong number'.format(num)) #printing false case
+	print(num, 'is not an amstrong number') #printing false case
