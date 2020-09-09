@@ -11,12 +11,12 @@ while True: #infinite loop till a valid input is received
 		print(colored('\nExiting', 'white'))
 		exit()
 
-sum = 0
+sum = 0 #variable to add sum of numbers
 
-for i in num:
-	sum += int(i) ** len(num)
+for digit in num:
+	sum += int(digit) ** len(num) #calculating sum of number raised to length of number
 
 if sum == int(num):
-	print('{} is an amstrong number'.format(num))
+	print('{} is an amstrong number'.format(num)) #printing true case
 else :
-	print('{} is not an amstrong number'.format(num))
+	print('{} is not an amstrong number'.format(num)) #printing false case
