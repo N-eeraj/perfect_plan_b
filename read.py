@@ -1,6 +1,6 @@
 from termcolor import colored
 
-def Read(data_type, msg): #function to read an input with specified datatype & imput message
+def Read(data_type, msg): #function to read an input with specified datatype & input message
 	while True: #infinite loop till a correct input is recieved
 		try: #reading input
 			ip = data_type(input('Enter ' + msg + ': '))
@@ -32,3 +32,9 @@ def fib(limit): #funtion to create a fibonacci list
 		for i in range(2, limit):
 			fib_list.append(fib_list[-2] + fib_list[-1]) #updating the fibonacci list
 	return fib_list
+
+def Pow(limit, pow):
+	sum = 1
+	for i in range(2, limit + 1):
+		sum += i ** pow
+	return sum
