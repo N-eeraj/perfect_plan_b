@@ -1,15 +1,6 @@
-from termcolor import colored
+import read
 
-while True: #infinite loop till a valid input is received
-	try: #trying to read valid input
-		num = int(input('Enter the number: ')) #valid input read
-		num = str(num)
-		break #exiting the loop
-	except ValueError: #handling non integer input
-		print(colored('Enter a valid integer', 'red'))
-	except KeyboardInterrupt: #handling keyboard inerrupt to exit
-		print(colored('\nExiting', 'white'))
-		exit()
+num = str(read.Read(int, 'a number'))
 
 sum = 0 #variable to add sum of numbers
 

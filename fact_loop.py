@@ -1,14 +1,6 @@
-from termcolor import colored
+import read
 
-while True: #infinite loop till a valid input is received
-	try: #trying to read valid input
-		num = int(input('Enter the number: ')) #valid input read
-		break #exiting the loop
-	except ValueError: #handling non integer input
-		print(colored('Enter a valid integer', 'red'))
-	except KeyboardInterrupt: #handling keyboard inerrupt to exit
-		print(colored('\nExiting', 'white'))
-		exit()
+num = read.Read(int, 'number')
 
 fact = num #initalizing factorial variable
 for i in range(2, num): #iterating over the input variable

@@ -1,17 +1,9 @@
-from termcolor import colored #importing colored module from termcolor library
+import read
 
-while True:
-	try: #trying to read required vslues & convert it to float
-		principle = float(input('Enter principle amount: '))
-		time  = float(input('Enter time: '))
-		rate  = float(input('Enter rate of interest: '))
-		break
-	except ValueError: #error message for non float input
-		print(colored('Error Invalid Entry\nEnter a valid number', 'red'))
-	except KeyboardInterrupt: #exiting on keyboard interrupt
-		print(colored('\nExiting', 'white'))
-		exit()
+principle = read.Read(float, 'Principle Amount')
+time = read.Read(float, 'Time')
+rate = read.Read(float, 'Rate of Interest')
 
-ci = principle * (1 + rate / 100) ** time #equation to find compound interest
+ci = round(principle * (1 + rate / 100) ** time, 2) #equation to find compound interest
 
 print('\nCompound interest for principle amount {}, for {} time, at an interest rate of {} is {}'.format(principle, time, rate, ci))
