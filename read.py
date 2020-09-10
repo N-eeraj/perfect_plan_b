@@ -11,3 +11,9 @@ def Read(data_type, msg):
 			print(colored('\n\nExiting', 'white')) #white exit msg
 			exit() #exit the program
 	return ip
+
+def prime(num):
+	for i in range(2, num):
+		if num % i == 0:
+			return False
+	return True
