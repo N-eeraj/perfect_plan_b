@@ -1,6 +1,6 @@
 from termcolor import colored
 
-def Read(data_type, msg):
+def Read(data_type, msg): #function to read an input with specified datatype & imput message
 	while True: #infinite loop till a correct input is recieved
 		try: #reading input
 			ip = data_type(input('Enter ' + msg + ': '))
@@ -12,8 +12,23 @@ def Read(data_type, msg):
 			exit() #exit the program
 	return ip
 
-def prime(num):
+def error(msg): #funtion to print red error message
+	print(colored(msg, 'red'))
+
+def prime(num): #function to check if a number is prime or not
 	for i in range(2, num):
 		if num % i == 0:
 			return False
 	return True
+
+def fib(limit): #funtion to create a fibonacci list
+	fib_list = []
+	if limit < 1: #invalid input
+		error('Invalid Position')
+		exit()
+	else:
+		fib_list.append(0) #1st position
+		fib_list.append(1) #2nd position
+		for i in range(2, limit):
+			fib_list.append(fib_list[-2] + fib_list[-1]) #updating the fibonacci list
+	return fib_list
