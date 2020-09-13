@@ -12,7 +12,7 @@ def Read(data_type, msg = 'Input'): #function to read an input with specified da
 			exit() #exit the program
 	return ip
 
-def error(msg): #funtion to print red error message
+def error(msg = 'Invalid Input'): #funtion to print red error message
 	print(colored(msg, 'red'))
 
 def prime(num): #function to check if a number is prime or not
@@ -39,10 +39,14 @@ def Pow(limit, pow):
 		sum += i ** pow
 	return sum
 
-def ReadList():
+def ReadList(d_type = str, msg = ''):
 	lst = []
 	while True:
-		ip = Read(str).lower()
+		ip = Read(str, msg).lower()
 		if ip == 'done':
 			return lst
-		lst.append(ip)
+		try:
+			lst.append(d_type(ip))
+		except:
+			error()
+			continue
