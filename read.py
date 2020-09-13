@@ -1,6 +1,6 @@
 from termcolor import colored
 
-def Read(data_type, msg): #function to read an input with specified datatype & input message
+def Read(data_type, msg = 'Input'): #function to read an input with specified datatype & input message
 	while True: #infinite loop till a correct input is recieved
 		try: #reading input
 			ip = data_type(input('Enter ' + msg + ': '))
@@ -38,3 +38,11 @@ def Pow(limit, pow):
 	for i in range(2, limit + 1):
 		sum += i ** pow
 	return sum
+
+def ReadList():
+	lst = []
+	while True:
+		ip = Read(str).lower()
+		if ip == 'done':
+			return lst
+		lst.append(ip)
