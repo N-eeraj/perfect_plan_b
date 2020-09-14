@@ -37,9 +37,9 @@ def Pow(limit, pow):
 	sum = 1
 	for i in range(2, limit + 1):
 		sum += i ** pow
-	return sum
+	return sum #returns sum of pwers
 
-def ReadList(d_type = str, msg = 'Input'):
+def ReadList(d_type = str, msg = 'Input'): #functions to read list
 	lst = []
 	while True:
 		ip = Read(str, msg).lower()
@@ -51,7 +51,7 @@ def ReadList(d_type = str, msg = 'Input'):
 			error()
 			continue
 
-def inList(key, list):
-	if key in list:
+def inList(key, search_): #checks if key is present in search_
+	if key in search_:
 		return True
 	return False
