@@ -39,7 +39,7 @@ def Pow(limit, pow):
 		sum += i ** pow
 	return sum
 
-def ReadList(d_type = str, msg = ''):
+def ReadList(d_type = str, msg = 'Input'):
 	lst = []
 	while True:
 		ip = Read(str, msg).lower()
