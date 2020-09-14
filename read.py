@@ -50,3 +50,8 @@ def ReadList(d_type = str, msg = 'Input'):
 		except:
 			error()
 			continue
+
+def inList(key, list):
+	if key in list:
+		return True
+	return False

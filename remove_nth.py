@@ -6,7 +6,7 @@ print(lst)
 
 #reading item to find & check if it is int the list
 key = read.Read(str,'item to remove')
-if key not in lst:
+if not read.inList(key, lst):
 	read.error(key + ' is not in the list')
 	exit()
 
