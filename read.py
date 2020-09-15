@@ -55,3 +55,13 @@ def inList(key, search_): #checks if key is present in search_
 	if key in search_:
 		return True
 	return False
+
+def ReadDict(key_type = 'str', val_type = 'str'):
+	dict = {}
+	while True:
+		key = Read(key_type, 'Key')
+		if key.lower() == 'done':
+			break
+		value = Read(val_type, 'Value of ' + key)
+		dict[key] = value
+	return dict
